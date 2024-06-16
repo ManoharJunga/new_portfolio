@@ -1,0 +1,135 @@
+.anime-container {
+  background-color: black;
+  overflow: hidden; /* Ensure content does not overflow */
+  position: relative; /* Ensure positioning for any additional elements */
+  height: 100vh; /* Adjust height to fit screen */
+}
+
+.anime-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 70vh; /* Ensure the image does not exceed 70% of the viewport height */
+  transition: transform 0.1s ease-out;
+}
+
+.black_page {
+  color: white;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .anime-container {
+    height: 30vh;
+  }
+
+  .anime-image {
+    max-height: 30vh; /* Adjust image height for medium screens */
+  }
+}
+
+@media (max-width: 767px) {
+  .anime-container {
+    height: 20vh;
+  }
+
+  .anime-image {
+    max-height: 20vh; /* Adjust image height for small screens */
+  }
+}
+
+
+/* Global variables */
+:root {
+  --marquee--colour: #ffffff;
+  --marquee--repeat-count: 6;
+  --marquee--base-duration: 1s;
+  --marquee--repeat-size: calc(100% / var(--marquee--repeat-count));
+  --marquee--double-size: calc(var(--marquee--repeat-size) * 2);
+  --marquee--duration: calc(var(--marquee--base-duration) * var(--char-count, 20));
+}
+
+/* General styling */
+.marquee {
+  overflow: hidden;
+  width: 110%;
+  margin-left: -5%;
+  mix-blend-mode: screen;
+  transform: rotate(-5deg);
+  background: var(--marquee--colour);
+  color: #000;
+}
+
+.marquee:nth-child(even) {
+  --marquee--direction: -1;
+  transform: rotate(5deg);
+  background: #000;
+  color: var(--marquee--colour);
+}
+
+.marquee p {
+  transform: translateY(0.07em);
+  font-weight: bold;
+  margin: 0;
+  display: flex;
+  gap: 0.5em;
+  line-height: 1.1;
+  font-size: clamp(2.5rem, 12vw, 6.2rem);
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.marquee p::after {
+  content: "*";
+  transform: translateY(0.175em); /* visually centers with rest of text */
+}
+
+/* Inner container */
+.marquee--inner {
+  width: max-content;
+  display: flex;
+  text-transform: uppercase;
+}
+
+/* Animation */
+@media (prefers-reduced-motion: no-preference) {
+  .marquee--inner {
+    animation: marquee var(--marquee--duration) infinite linear, reduce-marquee var(--marquee--duration) infinite linear paused;
+    animation-composition: add;
+  }
+
+  .marquee:hover .marquee--inner {
+    animation-play-state: running;
+  }
+}
+
+/* Keyframes */
+@keyframes marquee {
+  from {
+    transform: translateX(calc((-1 * var(--marquee--double-size)) - (var(--marquee--double-size) * var(--marquee--direction, 1))));
+  }
+  to {
+    transform: translateX(calc(var(--marquee--double-size) * -1));
+  }
+}
+
+@keyframes reduce-marquee {
+  from {
+    transform: translateX(calc(var(--marquee--repeat-size) * var(--marquee--direction, 1)));
+  }
+  to {
+    transform: translateX(calc(var(--marquee--double-size) * -1));
+  }
+}
+
+
+/* .marquees container */
+.marquees {
+  align-content: center;
+  height: 100%;
+  display: grid;
+  gap: 5vw;
+}

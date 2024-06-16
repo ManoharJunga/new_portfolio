@@ -1,0 +1,54 @@
+/* index.css */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body.page-transition {
+  animation: slideUp 1s forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Page transition CSS classes */
+
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Additional CSS for the About Page */
+
+.page {
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.about-page {
+  background-color: #f4f4f4;
+}

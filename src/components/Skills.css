@@ -1,0 +1,56 @@
+.skills-container {
+    background-color: #1ec5fc; /* Set the blue background color */
+    overflow: hidden; /* Ensure no overflow */
+    position: relative; 
+    border: 1px solid #000;
+    z-index: 0;
+    /* Required for parallax effect */
+  }
+  
+  .skills {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 250px; /* Space between each column */
+    padding: 20px;
+    position: relative; /* Relative positioning for parallax effect */
+    z-index: 1; /* Ensure content stays above parallax background */
+  }
+  
+  .skills ul {
+    list-style-type: none; /* Remove default list styling */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center-align text within each column */
+  }
+  
+  .skills li {
+    line-height: 1.8;
+    font-size: 18px; /* Adjust font size as needed */
+    color: var(--color-white); /* Set text color to white */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 767px) {
+    .skills {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem; /* Adjust gap as needed */
+      padding: 2rem 1.6rem;
+    }
+  }
+  
+  /* Parallax effect */
+  .skills-container::before {
+    content: "";
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place behind the content */
+    opacity: 0.2; /* Adjust opacity as desired */
+  }
+  
