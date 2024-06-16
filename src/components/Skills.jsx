@@ -8,29 +8,29 @@ function Skills() {
         <p className="oh">My Skills</p>
       </div>
       <div className="skills">
-        <ul>
-          <li>React JS</li>
-          <li>Express JS</li>
-          <li>Node JS</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Tailwind CSS</li>
+        <ul className="skill-column">
+          <li className="skill-item">React JS</li>
+          <li className="skill-item">Express JS</li>
+          <li className="skill-item">Node JS</li>
+          <li className="skill-item">HTML</li>
+          <li className="skill-item">CSS</li>
+          <li className="skill-item">Tailwind CSS</li>
         </ul>
-        <ul>
-          <li>TensorFlow</li>
-          <li>PyTorch</li>
-          <li>Neural Networks</li>
-          <li>Machine Learning</li>
-          <li>AI</li>
+        <ul className="skill-column">
+          <li className="skill-item">TensorFlow</li>
+          <li className="skill-item">PyTorch</li>
+          <li className="skill-item">Neural Networks</li>
+          <li className="skill-item">Machine Learning</li>
+          <li className="skill-item">AI</li>
         </ul>
-        <ul>
-          <li>C</li>
-          <li>Python</li>
-          <li>Swift</li>
-          <li>C++</li>
-          <li>Java</li>
-          <li>TypeScript</li>
-          <li>JavaScript</li>
+        <ul className="skill-column">
+          <li className="skill-item">C</li>
+          <li className="skill-item">Python</li>
+          <li className="skill-item">Swift</li>
+          <li className="skill-item">C++</li>
+          <li className="skill-item">Java</li>
+          <li className="skill-item">TypeScript</li>
+          <li className="skill-item">JavaScript</li>
         </ul>
       </div>
       <div className="home__hero__text left" data-mobile="">
@@ -39,7 +39,6 @@ function Skills() {
       <div className="home__hero__text left" data-mobile="">
         <p className="oh">Strategy</p>
       </div>
-
       <div className="home__hero__text right" data-mobile="">
         <p className="oh">To design and</p>
       </div>

@@ -5,10 +5,10 @@ function Intro() {
   return (
     <div className="homehero">
       <div className="homeherotext right" data-mobile="">
-        <p className="oh">Innovative code.</p>
+        <p className="oh">Innovative code</p>
       </div>
       <div className="homeherotext left" data-mobile="">
-        <p className="oh">Creative team.</p>
+        <p className="oh">Creative Mind</p>
       </div>
       <div className="homeherotext left" data-mobile="">
         <p className="oh">Agile progress.</p>

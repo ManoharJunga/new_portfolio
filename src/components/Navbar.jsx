@@ -21,6 +21,8 @@ function Navbar() {
   const handleNavigation = (path) => {
     if (location.pathname !== path) {
       navigate(path);
+      setIsOpen(false); // Close the navbar after navigation
+      navRef.current.classList.remove("responsive_nav");
     }
   };
 
@@ -28,10 +30,10 @@ function Navbar() {
     <header className="header">
       <div className="navbar">
         <nav ref={navRef}>
-          <a onClick={() => handleNavigation("/")} className="name_logo">
+          <li type="button" onClick={() => handleNavigation("/")} className="name_logo">
             MANOHAR JUNGA
-          </a>
-          <button onClick={() => handleNavigation("/about")}>
+          </li>
+          <button type="button" onClick={() => handleNavigation("/about")}>
             <span className="span-mother">
               <span>A</span>
               <span>B</span>
@@ -47,7 +49,7 @@ function Navbar() {
               <span>T</span>
             </span>
           </button>
-          <button onClick={() => handleNavigation("/projects")}>
+          <button type="button" onClick={() => handleNavigation("/projects")}>
             <span className="span-mother">
               <span>P</span>
               <span>R</span>
@@ -69,7 +71,7 @@ function Navbar() {
               <span>S</span>
             </span>
           </button>
-          <button onClick={() => handleNavigation("/contact")}>
+          <button type="button" onClick={() => handleNavigation("/contact")}>
             <span className="span-mother">
               <span>C</span>
               <span>O</span>
@@ -90,7 +92,7 @@ function Navbar() {
             </span>
           </button>
         </nav>
-        <button className="nav-btn" onClick={toggleNavbar}>
+        <button className="nav-btn" type="button" onClick={toggleNavbar}>
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>

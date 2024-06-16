@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import Navbar from './components/Navbar';
-import Home from './Pages/Main';
-import About from './Pages/About';
-import Projects from './Pages/Projects';
-import Contact from './Pages/Contact';
-import './Pages/PageTransition.css';
+import Navbar from './Navbar';
+import Home from './Home';
+import About from './About';
+import Projects from './Projects';
+import Contact from './Contact';
+import './PageTransition.css';
 
 function App() {
   const location = useLocation();
