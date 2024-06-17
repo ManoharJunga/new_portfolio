@@ -1,14 +1,14 @@
-/* index.css */
+
 body {
   margin: 0;
   padding: 0;
 }
 
 body.page-transition {
-  animation: slideUp 1s forwards;
+  animation: slideUp 0.3s ease-out forwards;
 }
 
-@keyframes slideUp {
+@keyframes slxideUp {
   0% {
     transform: translateY(100%);
   }
@@ -27,7 +27,7 @@ body.page-transition {
 .page-transition-enter-active {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
 
 .page-transition-exit {
@@ -38,7 +38,7 @@ body.page-transition {
 .page-transition-exit-active {
   opacity: 0;
   transform: translateY(-100%);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
 
 /* Additional CSS for the About Page */
