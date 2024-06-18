@@ -1,3 +1,26 @@
 .project{
-    color: orangered;;
+    color: orangered;
+    font-size: 250px;
 }
+
+
+@media (min-width: 1200px) {
+    .project {
+      font-size: 12rem; /* Adjust font size as needed */
+    }
+  }
+  
+  /* For medium screens */
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .project {
+      font-size: 8rem; /* Adjust font size as needed */
+    }
+  }
+  
+  /* For small screens */
+  @media (max-width: 767px) {
+    .project {
+      font-size: 4rem; /* Adjust font size as needed */
+    }
+  }
+  

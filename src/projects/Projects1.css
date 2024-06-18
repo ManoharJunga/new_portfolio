@@ -1,0 +1,19 @@
+.furniture-gallery {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    align-items: left;
+  }
+  
+  .furniture-image img {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .furniture-description {
+    color: black;
+    font-size: 0.9rem;
+    padding-left: 50px;
+    text-align: left;
+  }
+  
