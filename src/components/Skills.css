@@ -8,6 +8,7 @@
   }
   
   .skills {
+    font-family: 'Times New Roman', Times, serif;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -25,8 +26,8 @@
   }
   
   .skills li {
-    line-height: 1.8;
-    font-size: 18px; /* Adjust font size as needed */
+    line-height: 1;
+    font-size: 25px; /* Adjust font size as needed */
     color: var(--color-white); /* Set text color to white */
   }
   

@@ -14,6 +14,7 @@ function Skills() {
           <li className="skill-item">Node JS</li>
           <li className="skill-item">HTML</li>
           <li className="skill-item">CSS</li>
+          <li className="skill-item">UX & UI Design</li>
           <li className="skill-item">Tailwind CSS</li>
         </ul>
         <ul className="skill-column">
