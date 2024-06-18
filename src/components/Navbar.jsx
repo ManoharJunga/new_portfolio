@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Navbar.css";
@@ -12,7 +12,7 @@ function Navbar() {
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
     if (isOpen) {
-      navRef.current.classList.remove("responsive_nav");
+      closeNavbar();
     } else {
       navRef.current.classList.add("responsive_nav");
     }
@@ -21,16 +21,24 @@ function Navbar() {
   const handleNavigation = (path) => {
     if (location.pathname !== path) {
       navigate(path);
-      setIsOpen(false); // Close the navbar after navigation
-      navRef.current.classList.remove("responsive_nav");
+      closeNavbar();
     }
+  };
+
+  const closeNavbar = () => {
+    setIsOpen(false);
+    navRef.current.classList.remove("responsive_nav");
   };
 
   return (
     <header className="header">
       <div className="navbar">
-        <nav ref={navRef}>
-          <li type="button" onClick={() => handleNavigation("/")} className="name_logo">
+        <nav ref={navRef} className="nav-links">
+          <li
+            type="button"
+            onClick={() => handleNavigation("/")}
+            className="name_logo"
+          >
             MANOHAR JUNGA
           </li>
           <button type="button" onClick={() => handleNavigation("/about")}>
