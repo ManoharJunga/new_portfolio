@@ -1,8 +1,7 @@
 .furniture-gallery {
     display: flex;
     flex-direction: column;
-    padding-left: 50px;
-    align-items: left;
+    align-items: center;
   }
   
   .furniture-image img {
@@ -13,7 +12,6 @@
   .furniture-description {
     color: black;
     font-size: 0.9rem;
-    padding-left: 50px;
-    text-align: left;
+    text-align: center;
   }
   

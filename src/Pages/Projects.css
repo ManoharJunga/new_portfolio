@@ -1,26 +1,73 @@
-.project{
-    color: orangered;
-    font-size: 250px;
+.project_text {
+  color: orangered;
+  font-size: 250px;
 }
 
-
+/* Media queries for responsive font size */
 @media (min-width: 1200px) {
-    .project {
-      font-size: 12rem; /* Adjust font size as needed */
-    }
+  .project_text {
+    font-size: 12rem; /* Adjust font size as needed */
   }
-  
-  /* For medium screens */
-  @media (min-width: 768px) and (max-width: 1199px) {
-    .project {
-      font-size: 8rem; /* Adjust font size as needed */
-    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .project_text {
+    font-size: 8rem; /* Adjust font size as needed */
   }
-  
-  /* For small screens */
-  @media (max-width: 767px) {
-    .project {
-      font-size: 4rem; /* Adjust font size as needed */
-    }
+}
+
+@media (max-width: 767px) {
+  .project_text {
+    font-size: 4rem; /* Adjust font size as needed */
   }
-  
+}
+
+/* Container styles */
+.project_1 {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Project component styles */
+.project_1 > div {
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+/* P1 and P2 images grayscale filter */
+.project_1 img {
+  filter: grayscale(100%);
+  transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+/* Hover effects for images */
+.project_1 img:hover {
+  filter: grayscale(0%);
+}
+
+/* Hover effects */
+.project_1 > div:hover {
+  transform: translateY(50px); /* Adjust this value as needed */
+}
+
+/* P1 specific hover effect */
+.project_1 .p1:hover {
+  transform: translateX(-50px); /* Moves left */
+}
+
+/* P2 specific hover effect */
+.project_1 .p2:hover {
+  transform: translateX(50px); /* Moves right */
+}
+
+/* Initial state for P1 and P2 (optional) */
+.project_1 .p1 {
+  transform: translateX(0); /* Ensure it starts from the default position */
+}
+
+.project_1 .p2 {
+  transform: translateX(0); /* Ensure it starts from the default position */
+}

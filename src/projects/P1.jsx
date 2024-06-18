@@ -1,8 +1,8 @@
 import React from 'react'
-import './Projects1.css';
+import './P1.css';
 import chatbot from '../images/Chatbot.png';
 
-const Projects1 = () => {
+const P1 = () => {
   return (
     <div className="furniture-gallery">
       <div className="furniture-image">
@@ -16,4 +16,4 @@ const Projects1 = () => {
   );
 }
 
-export default Projects1;
+export default P1;
